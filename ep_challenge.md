@@ -10,13 +10,22 @@
 ==========
 
 **Create a git repository**  
- $ git init
+`$ git init`
+
+**Check status**
+`$ git status`
  
-**Add everything to the repository**  
+**Add everything to the repository** 
+
+**Check status**
+`$ git status`
 `$ git add .`
 
 **Commit everything**  
 `$ git commit -m 'Initial commit'`
+
+**Check status**
+`$ git status`
 
 **Create a Github repository**  
 
