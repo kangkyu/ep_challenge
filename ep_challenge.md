@@ -80,6 +80,7 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 [http://www.sitepoint.com/building-your-first-rails-application-models/](http://www.sitepoint.com/building-your-first-rails-application-models/)
 
 [http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for](http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for)
+
 ------
 
 ### Displaying a report:
