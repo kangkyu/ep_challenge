@@ -27,7 +27,7 @@
 **Check status**  
 `$ git status`
 
-**Create a Github repository**  
+[**Create a Github repository**](https://github.com/jendiamond/ep_challenge)   
 
 **Add the remote host to your local git**  
 `$ git remote add origin git@github.com:jendiamond/ep_challenge.git`
