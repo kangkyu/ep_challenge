@@ -11,9 +11,27 @@
     $ rail generate scaffold Fetch url:string 
     $ rake db:migrate
 
-You can write `$rails s` and `rails g` but it is good to be specific about what you are doing.
+You can write `$ rails s` and `$ rails g` but it is good practice to be specific about what you are doing.
 
 Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations
+
+**Create a git repository**
+ $ git init
+ 
+**Add everything to the repository**
+`$ git add .`
+
+**Commit everything**
+`$ git commit -m 'Initial commit'`
+
+**Create a Github repository**
+
+**Add the remote host to your local git**
+`$ git remote add origin git@github.com:jendiamond/ep_challenge.git`
+
+**Push commit to Github**
+`$ git push -u origin master`
+
 
 [http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field)
 
