@@ -65,6 +65,8 @@ Migrations are Ruby classes that are designed to make it simple to create and mo
 
 #### With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
+wget http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
+
     $ vim app/models/fetch.rb
 
 **fetch data for the 'entire day of 2014-01-01'**
