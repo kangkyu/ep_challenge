@@ -12,19 +12,19 @@
 **Create a git repository**  
 `$ git init`
 
-**Check status**
+**Check status**  
 `$ git status`
  
-**Add everything to the repository** 
-
-**Check status**
-`$ git status`
+**Add everything to the repository**  
 `$ git add .`
+
+**Check status**  
+`$ git status`
 
 **Commit everything**  
 `$ git commit -m 'Initial commit'`
 
-**Check status**
+**Check status**  
 `$ git status`
 
 **Create a Github repository**  
