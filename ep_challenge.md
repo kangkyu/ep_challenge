@@ -8,7 +8,7 @@
     $ rake db:create
     $ rails server
     
-    $ rail g scaffold Fetch url:string 
+    $ rail generate scaffold Fetch url:string 
     $ rake db:migrate
 
 **Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations**  
