@@ -57,7 +57,7 @@ Activity for 1/1/2015 @ 3PM UTC
 **Command**  
 wget http://data.githubarchive.org/2015-01-01-15.json.gz
  
-    $ rail generate scaffold Fetch url:string 
+    $ rails generate scaffold Fetch url:string 
     $ rake db:migrate
 
 ------
