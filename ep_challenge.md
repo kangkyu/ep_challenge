@@ -7,7 +7,7 @@
     $ bundle install
     $ rails server
  
- =====
+=====
     
 You can write `$ rails s`, `$ rails g` and `$ bundle` but it is good practice to be specific about what you are doing.
 
