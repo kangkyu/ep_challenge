@@ -59,8 +59,6 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
 =====
     
-You can write `$ rails s`, `$ rails g` and `$ bundle` but it is good practice to be specific about what you are doing.
-
 Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations.
 
 ------
