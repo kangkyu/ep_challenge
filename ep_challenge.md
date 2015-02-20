@@ -48,11 +48,11 @@ You can write `$ rails s`, `$ rails g` and `$ bundle` but it is good practice to
 #### Create a Fetch Model with Controllers and Views with a form that takes a url. 
 
 See example form [http://www.githubarchive.org](http://www.githubarchive.org)   
-**Query**   
-Activity for 1/1/2015 @ 3PM UTC
+> **Query**   
+> Activity for 1/1/2015 @ 3PM UTC
 
-**Command**  
-wget http://data.githubarchive.org/2015-01-01-15.json.gz
+> **Command**  
+> wget http://data.githubarchive.org/2015-01-01-15.json.gz
  
     $ rails generate scaffold Fetch url:string 
     $ rake db:migrate
