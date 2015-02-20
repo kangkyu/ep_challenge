@@ -34,7 +34,7 @@ Migrations are Ruby classes that are designed to make it simple to create and mo
 
 ### Perform this task in "Rails" using MVC. Create a Fetch Model with Controllers and Views with a form that takes a url. 
 
-See example from [http://www.githubarchive.org](http://www.githubarchive.org) [http://data.githubarchive.org/2014-01-01-1.json.gz](http://data.githubarchive.org/2014-01-01-1.json.gz)
+See example form [http://www.githubarchive.org](http://www.githubarchive.org)   http://data.githubarchive.org/2014-01-01-1.json.gz
  
     $ rail generate scaffold Fetch url:string 
     $ rake db:migrate
