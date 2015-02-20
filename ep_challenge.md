@@ -1,6 +1,6 @@
 [https://github.com/ceospfx/epoch/blob/master/README.md](https://github.com/ceospfx/epoch/blob/master/README.md)
 
-### Generate a new rails app.
+## Generate a new rails app.
 
     $ rails new epoch_fetch_and_insert_in_db
     $ rake db:create
