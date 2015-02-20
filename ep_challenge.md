@@ -13,7 +13,7 @@
 
 You can write `$ rails s` and `$ rails g` but it is good practice to be specific about what you are doing.
 
-Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations
+Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations.
 
 ==========
 
@@ -33,22 +33,6 @@ Migrations are Ruby classes that are designed to make it simple to create and mo
 
 **Push commit to Github**  
 `$ git push -u origin master`
-
-==========
-
-[http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field)
-
-`url_field(object_name, method, options = {})Link`
-`Returns a #text_field of type “url”.`
-`url_field("user", "homepage")`
-`# => <input id="user_homepage" name="user[homepage]" type="url" />`
-
-`<%= url_field(:user, :homepage) %>`
-[http://guides.rubyonrails.org/form_helpers.html](http://guides.rubyonrails.org/form_helpers.html)
-
-[http://www.sitepoint.com/building-your-first-rails-application-models/](http://www.sitepoint.com/building-your-first-rails-application-models/)
-
-[http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for](http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for)
 
 ------
 
@@ -81,6 +65,21 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 [http://guides.rubyonrails.org/v2.3.11/active_record_querying.html](http://guides.rubyonrails.org/v2.3.11/active_record_querying.html)
 [http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field](http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field)
 
+==============
+
+[http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field)
+
+`url_field(object_name, method, options = {})Link`
+`Returns a #text_field of type “url”.`
+`url_field("user", "homepage")`
+`# => <input id="user_homepage" name="user[homepage]" type="url" />`
+
+`<%= url_field(:user, :homepage) %>`
+[http://guides.rubyonrails.org/form_helpers.html](http://guides.rubyonrails.org/form_helpers.html)
+
+[http://www.sitepoint.com/building-your-first-rails-application-models/](http://www.sitepoint.com/building-your-first-rails-application-models/)
+
+[http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for](http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for)
 ------
 
 ### Displaying a report:
