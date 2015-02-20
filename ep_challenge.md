@@ -32,6 +32,9 @@
 **Add the remote host to your local git**  
 `$ git remote add origin git@github.com:jendiamond/ep_challenge.git`
 
+**Check your remotes**  
+`$ git remote -v`
+
 **Push commit to Github**  
 `$ git push -u origin master`
 
