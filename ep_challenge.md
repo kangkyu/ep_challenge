@@ -8,6 +8,7 @@
     $ rail g scaffold Fetch url:string 
     $ rake db:migrate
 
+**Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations**  
 [http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field)
 
 `url_field(object_name, method, options = {})Link`
@@ -22,8 +23,7 @@
 
 [http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for](http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for)
 
-**Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations**
-
+========
 
 #### With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
@@ -46,7 +46,6 @@
   `where("published_at >= ? and published_at <= ?", boy, eoy) `  
 `end`
 
-
 **insert them into a database via your rails model**
 
 Assuming that your "date attribute" is a date (rather than a full timestamp) then a simple wherewill give you your "find by date":
@@ -55,8 +54,9 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 [http://guides.rubyonrails.org/v2.3.11/active_record_querying.html](http://guides.rubyonrails.org/v2.3.11/active_record_querying.html)
 [http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field](http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field)
 
+========
 
-#### Displaying a report:
+### Displaying a report:
 
 #### Create another model called Report with controllers and views.
 
