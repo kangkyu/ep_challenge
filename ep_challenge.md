@@ -1,10 +1,10 @@
 [https://github.com/ceospfx/epoch/blob/master/README.md](https://github.com/ceospfx/epoch/blob/master/README.md)
 
-# Generate a new rails app.
+### Generate a new rails app.
 
     $ rails new epoch_fetch_and_insert_in_db
 
-+ Please perform this task in "Rails" using MVC. Create a Fetch Model with Controllers and Views with a form that takes a url. See example from http://www.githubarchive.org. ( eg. http://data.githubarchive.org/2014-01-01-1.json.gz )
+### Please perform this task in "Rails" using MVC. Create a Fetch Model with Controllers and Views with a form that takes a url. See example from http://www.githubarchive.org. ( eg. http://data.githubarchive.org/2014-01-01-1.json.gz )
 
     $ rail g scaffold Fetch url:string 
     $ rake db:migrate
@@ -23,10 +23,10 @@
 
 [http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for](http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for)
 
-Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations
+**Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations**
 
 
-+ With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
+#### With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
     $ vim app/models/fetch.rb
 
@@ -57,21 +57,21 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 [http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field](http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field)
 
 
-# Displaying a report:
+#### Displaying a report:
 
-+ Create another model called Report with controllers and views.
+#### Create another model called Report with controllers and views.
 
     $ rail g scaffold Report timerange:
     $ rake db:migrate
 
-+ Here you will create a form that will take a time range (put this in a partial so it can be reused). Query your database for the 'type' of 'PushEvent' within that time range.
+#### Here you will create a form that will take a time range (put this in a partial so it can be reused). Query your database for the 'type' of 'PushEvent' within that time range.
 
     $ vim app/views/shared/_timerange.rb
 
 **Query your database for the 'type' of 'PushEvent' within that time range.**
 
 
-+ Output the results in a bar graph showing only the top ten ['repository']['name'] and the count. (hint some ['repository']['name'] have multiple PushEvents)
+#### Output the results in a bar graph showing only the top ten ['repository']['name'] and the count. (hint some ['repository']['name'] have multiple PushEvents)
 
 [http://stackoverflow.com/questions/19856714/display-in-a-graph-just-unique-values-for-a-column](http://stackoverflow.com/questions/19856714/display-in-a-graph-just-unique-values-for-a-column)
 [https://www.ruby-toolbox.com/categories/graphing](https://www.ruby-toolbox.com/categories/graphing)
@@ -79,7 +79,7 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 [https://www.githubarchive.org/](https://www.githubarchive.org/)
 [http://railscasts.com/episodes/223-charts?view=comments](http://railscasts.com/episodes/223-charts?view=comments)
 
-+ Create a second page that outputs the results in a datatable showing only the top 25 by ['repository']['name'], ['repository']['url'], and count.   
+#### Create a second page that outputs the results in a datatable showing only the top 25 by ['repository']['name'], ['repository']['url'], and count.   
 Hyperlink the name to the repository url.  
 (Hint: here's a plugin that helps draw datatables - https://datatables.net)
 
@@ -89,12 +89,12 @@ Hyperlink the name to the repository url.
 [https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html](https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html)
 [http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl](http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl)
 
-# Extra Credit:
+#### Extra Credit:
 
-+ Give the report a dropdown option for all EventTypes that gets the same report via ajax.
+#### Give the report a dropdown option for all EventTypes that gets the same report via ajax.
 https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=drop+down+report+via+ajax+rails
 
-+ Add styling using Twitter Bootstrap.
+#### Add styling using Twitter Bootstrap.
 
     $ vim Gemfile
 
