@@ -15,6 +15,8 @@ You can write `$ rails s` and `$ rails g` but it is good practice to be specific
 
 Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations
 
+==========
+
 **Create a git repository**  
  $ git init
  
@@ -31,6 +33,8 @@ Migrations are Ruby classes that are designed to make it simple to create and mo
 
 **Push commit to Github**  
 `$ git push -u origin master`
+
+==========
 
 [http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field)
 
