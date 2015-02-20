@@ -23,7 +23,7 @@
 
 [http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for](http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for)
 
-========
+------
 
 #### With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
@@ -54,7 +54,7 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 [http://guides.rubyonrails.org/v2.3.11/active_record_querying.html](http://guides.rubyonrails.org/v2.3.11/active_record_querying.html)
 [http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field](http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field)
 
-========
+------
 
 ### Displaying a report:
 
@@ -69,6 +69,7 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 
 **Query your database for the 'type' of 'PushEvent' within that time range.**
 
+------
 
 #### Output the results in a bar graph showing only the top ten ['repository']['name'] and the count. (hint some ['repository']['name'] have multiple PushEvents)
 
@@ -77,6 +78,8 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 [https://books.google.com/books?id=87YaAtJn5BQC&pg=PA155&lpg=PA155&dq=rails+Output+the+results+in+a+bar+graph&source=bl&ots=Y182B3tPyl&sig=R0YJJ12tj1h2rsLn0_9bfOtfXG4&hl=en&sa=X&ei=-KLlVLfwOZekoQTZnoC4Bg&ved=0CD0Q6AEwBA#v=onepage&q=rails%20Output%20the%20results%20in%20a%20bar%20graph&f=false](https://books.google.com/books?id=87YaAtJn5BQC&pg=PA155&lpg=PA155&dq=rails+Output+the+results+in+a+bar+graph&source=bl&ots=Y182B3tPyl&sig=R0YJJ12tj1h2rsLn0_9bfOtfXG4&hl=en&sa=X&ei=-KLlVLfwOZekoQTZnoC4Bg&ved=0CD0Q6AEwBA#v=onepage&q=rails%20Output%20the%20results%20in%20a%20bar%20graph&f=false)
 [https://www.githubarchive.org/](https://www.githubarchive.org/)
 [http://railscasts.com/episodes/223-charts?view=comments](http://railscasts.com/episodes/223-charts?view=comments)
+
+------
 
 #### Create a second page that outputs the results in a datatable showing only the top 25 by ['repository']['name'], ['repository']['url'], and count.   
 Hyperlink the name to the repository url.  
@@ -88,11 +91,16 @@ Hyperlink the name to the repository url.
 [https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html](https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html)
 [http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl](http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl)
 
+------
+
 #### Extra Credit:
 
 #### Give the report a dropdown option for all EventTypes that gets the same report via ajax.
-https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=drop+down+report+via+ajax+rails
 
+[https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=drop+down+report+via+ajax+rails](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=drop+down+report+via+ajax+rails)
+
+
+------
 #### Add styling using Twitter Bootstrap.
 
     $ vim Gemfile
