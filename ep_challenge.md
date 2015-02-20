@@ -90,9 +90,10 @@ wget http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
 
 Assuming that your "date attribute" is a date (rather than a full timestamp) then a simple wherewill give you your "find by date":
 
-+ [http://apidock.com/rails/ActiveSupport/TimeWithZone/strftime](http://apidock.com/rails/ActiveSupport/TimeWithZone/strftime)
-+ [http://guides.rubyonrails.org/v2.3.11/active_record_querying.html](http://guides.rubyonrails.org/v2.3.11/active_record_querying.html)
-+ [http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field](http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field)
++ [ActiveSupport/TimeWithZone/strftime](http://apidock.com/rails/ActiveSupport/TimeWithZone/strftime)
++ [active_record_querying.html](http://guides.rubyonrails.org/v2.3.11/active_record_querying.html)
++ [activerecord-find-by-year-day-or-month-on-a-date-field](http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field)
++ [Learn how to use your database to make your Ruby on Rails applications rock solid.](http://www.pluralsight.com/courses/database-your-friend)
 
 ==============
 
