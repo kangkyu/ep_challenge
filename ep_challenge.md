@@ -4,7 +4,7 @@
 
     $ rails new epoch_fetch_and_insert_in_db
 
-### Please perform this task in "Rails" using MVC. Create a Fetch Model with Controllers and Views with a form that takes a url. See example from http://www.githubarchive.org. ( eg. http://data.githubarchive.org/2014-01-01-1.json.gz )
+#### Please perform this task in "Rails" using MVC. Create a Fetch Model with Controllers and Views with a form that takes a url. See example from http://www.githubarchive.org. ( eg. http://data.githubarchive.org/2014-01-01-1.json.gz )
 
     $ rail g scaffold Fetch url:string 
     $ rake db:migrate
