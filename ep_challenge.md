@@ -104,25 +104,16 @@ Hyperlink the name to the repository url.
 
     $ vim Gemfile
 
-Gemfile
-source 'https://rubygems.org'
+    source 'https://rubygems.org'
 
-gem 'rails',                          '4.2.0'
-gem 'bootstrap-sass',       '3.2.0.0'
+    gem 'rails',                          '4.2.0'
+    gem 'bootstrap-sass',       '3.2.0.0'
 
+    $ bundle install
+    $ vim app/assets/stylesheets/custom.css.scss
 
-
-$ bundle install
-
-$ touch app/assets/stylesheets/custom.css.scss
-
-
-
-app/assets/stylesheets/custom.css.scss
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-
+    @import "bootstrap-sprockets";
+    @import "bootstrap";
 
 /* universal */
 
