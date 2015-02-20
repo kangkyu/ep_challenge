@@ -97,7 +97,7 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 
 ==============
 
-+ [http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field)
++ [ActionView/Helpers/FormHelper.html#method-i-url_field](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field)
 
 `url_field(object_name, method, options = {})Link`
 `Returns a #text_field of type “url”.`
@@ -105,11 +105,11 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 `# => <input id="user_homepage" name="user[homepage]" type="url" />`
 
 `<%= url_field(:user, :homepage) %>`
-+ [http://guides.rubyonrails.org/form_helpers.html](http://guides.rubyonrails.org/form_helpers.html)
++ [form_helpers.html](http://guides.rubyonrails.org/form_helpers.html)
 
-+ [http://www.sitepoint.com/building-your-first-rails-application-models/](http://www.sitepoint.com/building-your-first-rails-application-models/)
++ [building-your-first-rails-application-models/](http://www.sitepoint.com/building-your-first-rails-application-models/)
 
-+ [http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for](http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for)
++ [issues-creating-a-url-form-field-using-action-view-and-form-for](http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for)
 
 ------
 
@@ -129,11 +129,11 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 
 #### Output the results in a bar graph showing only the top ten ['repository']['name'] and the count. (hint some ['repository']['name'] have multiple PushEvents)
 
-+ [http://stackoverflow.com/questions/19856714/display-in-a-graph-just-unique-values-for-a-column](http://stackoverflow.com/questions/19856714/display-in-a-graph-just-unique-values-for-a-column)
-+ [https://www.ruby-toolbox.com/categories/graphing](https://www.ruby-toolbox.com/categories/graphing)
-[https://books.google.com/books?id=87YaAtJn5BQC&pg=PA155&lpg=PA155&dq=rails+Output+the+results+in+a+bar+graph&source=bl&ots=Y182B3tPyl&sig=R0YJJ12tj1h2rsLn0_9bfOtfXG4&hl=en&sa=X&ei=-KLlVLfwOZekoQTZnoC4Bg&ved=0CD0Q6AEwBA#v=onepage&q=rails%20Output%20the%20results%20in%20a%20bar%20graph&f=false](https://books.google.com/books?id=87YaAtJn5BQC&pg=PA155&lpg=PA155&dq=rails+Output+the+results+in+a+bar+graph&source=bl&ots=Y182B3tPyl&sig=R0YJJ12tj1h2rsLn0_9bfOtfXG4&hl=en&sa=X&ei=-KLlVLfwOZekoQTZnoC4Bg&ved=0CD0Q6AEwBA#v=onepage&q=rails%20Output%20the%20results%20in%20a%20bar%20graph&f=false)
-+ [https://www.githubarchive.org/](https://www.githubarchive.org/)
-+ [http://railscasts.com/episodes/223-charts?view=comments](http://railscasts.com/episodes/223-charts?view=comments)
++ [display-in-a-graph-just-unique-values-for-a-column](http://stackoverflow.com/questions/19856714/display-in-a-graph-just-unique-values-for-a-column)
++ [graphing](https://www.ruby-toolbox.com/categories/graphing)
+[Graphs](https://books.google.com/books?id=87YaAtJn5BQC&pg=PA155&lpg=PA155&dq=rails+Output+the+results+in+a+bar+graph&source=bl&ots=Y182B3tPyl&sig=R0YJJ12tj1h2rsLn0_9bfOtfXG4&hl=en&sa=X&ei=-KLlVLfwOZekoQTZnoC4Bg&ved=0CD0Q6AEwBA#v=onepage&q=rails%20Output%20the%20results%20in%20a%20bar%20graph&f=false)
++ [githubarchive.org/](https://www.githubarchive.org/)
++ [Railscasts Episodes/223 Charts](http://railscasts.com/episodes/223-charts?view=comments)
 
 ------
 
@@ -142,10 +142,10 @@ Hyperlink the name to the repository url.
 (Hint: here's a plugin that helps draw datatables - https://datatables.net)
 
 **tutorials:**
-+ [http://railscasts.com/episodes?utf8=%E2%9C%93&search=datatables](http://railscasts.com/episodes?utf8=%E2%9C%93&search=datatables)
-+ [http://www.sitepoint.com/working-jquery-datatables/](http://www.sitepoint.com/working-jquery-datatables/)
-+ [https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html](https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html)
-+ [http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl](http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl)
++ [Railscasts Episodes Datatables](http://railscasts.com/episodes?utf8=%E2%9C%93&search=datatables)
++ [Sitepoint working-jquery-datatables/](http://www.sitepoint.com/working-jquery-datatables/)
++ [jquery-datatables-column-filter](https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html)
++ [Enhancing-HTML-tables-using-a-JQuery-DataTables](http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl)
 
 ------
 
@@ -153,7 +153,7 @@ Hyperlink the name to the repository url.
 
 #### Give the report a dropdown option for all EventTypes that gets the same report via ajax.
 
-+ [https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=drop+down+report+via+ajax+rails](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=drop+down+report+via+ajax+rails)
++ [Ajax and Rails](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=drop+down+report+via+ajax+rails)
 
 
 ------
