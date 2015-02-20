@@ -60,11 +60,10 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 
 #### Create another model called Report with controllers and views.
 
+###### Here you will create a form that will take a time range (put this in a partial so it can be reused). Query your database for the 'type' of 'PushEvent' within that time range.
+
     $ rail g scaffold Report timerange:
     $ rake db:migrate
-
-#### Here you will create a form that will take a time range (put this in a partial so it can be reused). Query your database for the 'type' of 'PushEvent' within that time range.
-
     $ vim app/views/shared/_timerange.rb
 
 **Query your database for the 'type' of 'PushEvent' within that time range.**
