@@ -32,7 +32,11 @@ You can write `$ rails s`, `$ rails g` and `$ bundle` but it is good practice to
 
 Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations.
 
-### Perform this task in "Rails" using MVC. Create a Fetch Model with Controllers and Views with a form that takes a url. 
+-----
+
+### Perform this task in "Rails" using MVC. 
+
+#### Create a Fetch Model with Controllers and Views with a form that takes a url. 
 
 See example form [http://www.githubarchive.org](http://www.githubarchive.org)   
 **Query**   
