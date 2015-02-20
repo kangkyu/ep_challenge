@@ -6,7 +6,13 @@
     $ rake db:create
     $ bundle install
     $ rails server
+ 
+ =====
     
+You can write `$ rails s`, `$ rails g` and `$ bundle` but it is good practice to be specific about what you are doing.
+
+Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations.
+
 ==========
 
 **Create a git repository**  
@@ -37,12 +43,6 @@
 
 **Push commit to Github**  
 `$ git push -u origin master`
-
-=====
-    
-You can write `$ rails s`, `$ rails g` and `$ bundle` but it is good practice to be specific about what you are doing.
-
-Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations.
 
 -----
 
