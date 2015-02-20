@@ -85,10 +85,10 @@ Hyperlink the name to the repository url.
 (Hint: here's a plugin that helps draw datatables - https://datatables.net)
 
 **tutorials:**
-[http://railscasts.com/episodes?utf8=%E2%9C%93&search=datatables](http://railscasts.com/episodes?utf8=%E2%9C%93&search=datatables)
-[http://www.sitepoint.com/working-jquery-datatables/](http://www.sitepoint.com/working-jquery-datatables/)
-[https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html](https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html)
-[http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl](http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl)
++ [http://railscasts.com/episodes?utf8=%E2%9C%93&search=datatables](http://railscasts.com/episodes?utf8=%E2%9C%93&search=datatables)
++ [http://www.sitepoint.com/working-jquery-datatables/](http://www.sitepoint.com/working-jquery-datatables/)
++ [https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html](https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html)
++ [http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl](http://www.codeproject.com/Articles/194916/Enhancing-HTML-tables-using-a-JQuery-DataTables-pl)
 
 ------
 
