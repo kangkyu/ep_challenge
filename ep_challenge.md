@@ -1,6 +1,6 @@
 [https://github.com/ceospfx/epoch/blob/master/README.md](https://github.com/ceospfx/epoch/blob/master/README.md)
 
-## Generate a new rails app
+## 1. Generate a new rails app
 
     $ rails new epoch_fetch_and_insert_in_db
     $ bundle install
@@ -43,7 +43,7 @@
 
 ***https://www.youtube.com/watch?v=VPor5ErX_90
 
-### Perform this task in "Rails" using MVC
+### 2. Perform this task in "Rails" using MVC
 
 #### Create a Fetch Model with Controllers and Views with a form that takes a url. 
 
@@ -84,7 +84,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
 =====
 
-#### With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
+#### 3. With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
 wget http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
 
