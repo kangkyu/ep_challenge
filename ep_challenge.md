@@ -56,10 +56,13 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
  
     $ rails generate controller Fetch 
     $ rails generate model Fetch url:string
+    $ rake db:migrate
     
     $ cd db
     $ sqlite3 development.sqlite3
     $ .schema
+    $ .quit
+    
     
     
     
