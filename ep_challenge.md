@@ -56,6 +56,28 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
  
     $ rails generate controller Fetch 
     $ rails generate model Fetch url:string
+    
+    $ cd db
+    $ sqlite3 development.sqlite3
+    $ .schema
+    
+    
+    
+    $ vim app/controller/fetches_controller.rb
+    
+    class FethchesController < ApplicationController
+      def new
+        @fetch = Fetch.new
+      end
+      
+      def create
+        @fetch = Fetch.new(params[:url])
+        if @fetch.save
+          redirect_to new_fetch_path
+      end
+    end
+    
+    $ vim app/views/new.html.erb
 
 =====
 
