@@ -5,7 +5,7 @@
     $ rails new epoch_fetch_and_insert_in_db
     $ bundle install
     $ rails server
- 
+    
 =====
     
 You can write `$ rails s`, `$ rails g` and `$ bundle` but it is good practice to be specific about what you are doing.
@@ -48,6 +48,8 @@ Update the README
     $ git mv README.rdoc README.md
  
 -----
+
+***https://www.youtube.com/watch?v=VPor5ErX_90
 
 ### Perform this task in "Rails" using MVC
 
