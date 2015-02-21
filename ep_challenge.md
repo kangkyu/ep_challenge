@@ -35,11 +35,9 @@
 **Push commit to Github**  
 `$ git push -u origin master`
 
-======
+**Update the README**
 
-Update the README
-
-    $ git mv README.rdoc README.md
+`$ git mv README.rdoc README.md`
  
 -----
 
