@@ -136,9 +136,9 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 
 ### Displaying a report:
 
-#### Create another model called Report with controllers and views.
+#### 1. Create another model called Report with controllers and views.
 
-###### Here you will create a form that will take a time range (put this in a partial so it can be reused). Query your database for the 'type' of 'PushEvent' within that time range.
+###### 2. Here you will create a form that will take a time range (put this in a partial so it can be reused). Query your database for the 'type' of 'PushEvent' within that time range.
 
     $ rail g scaffold Report timerange:
     $ rake db:migrate
@@ -148,7 +148,7 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 
 ------
 
-#### Output the results in a bar graph showing only the top ten ['repository']['name'] and the count. (hint some ['repository']['name'] have multiple PushEvents)
+#### 3. Output the results in a bar graph showing only the top ten ['repository']['name'] and the count. (hint some ['repository']['name'] have multiple PushEvents)
 
 + [display-in-a-graph-just-unique-values-for-a-column](http://stackoverflow.com/questions/19856714/display-in-a-graph-just-unique-values-for-a-column)
 + [graphing](https://www.ruby-toolbox.com/categories/graphing)
@@ -158,7 +158,7 @@ Assuming that your "date attribute" is a date (rather than a full timestamp) the
 
 ------
 
-#### Create a second page that outputs the results in a datatable showing only the top 25 by ['repository']['name'], ['repository']['url'], and count.   
+#### 4. Create a second page that outputs the results in a datatable showing only the top 25 by ['repository']['name'], ['repository']['url'], and count.   
 Hyperlink the name to the repository url.  
 (Hint: here's a plugin that helps draw datatables - https://datatables.net)
 
