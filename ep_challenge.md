@@ -41,6 +41,12 @@ You can write `$ rails s`, `$ rails g` and `$ bundle` but it is good practice to
 **Push commit to Github**  
 `$ git push -u origin master`
 
+======
+
+Update the README
+
+    $ git mv README.rdoc README.md
+ 
 -----
 
 ### Perform this task in "Rails" using MVC
@@ -54,14 +60,11 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 > **Command**  
 > wget http://data.githubarchive.org/2015-01-01-15.json.gz
  
-    $ rails generate scaffold Fetch url:string 
-    $ rake db:migrate
+    $ rails generate controller Fetch 
+    $ rails generate model Fetch url:string
+
 
 =====
-    
-Migrations are Ruby classes that are designed to make it simple to create and modify database tables. Rails uses rake commands to run migrations.
-
-------
 
 #### With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
