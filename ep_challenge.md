@@ -57,7 +57,6 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
     $ rails generate controller Fetch 
     $ rails generate model Fetch url:string
 
-
 =====
 
 #### With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
