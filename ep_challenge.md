@@ -6,8 +6,6 @@
     $ bundle install
     $ rails server
 
-==========
-
 **Create a git repository**  
 `$ git init`
 
