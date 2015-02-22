@@ -75,6 +75,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
         @fetch = Fetch.new(params[:fetch])
         if @fetch.save
           redirect_to new_fetch_path
+        end
       end
     end
 
