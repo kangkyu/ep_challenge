@@ -2,8 +2,7 @@
 
 ## 1. Generate a new rails app
 
-    $ rails new epoch_fetch_and_insert_in_db
-    $ bundle install
+    $ rails new ep_challenge
     $ rails server
 
 **Create a git repository**  
