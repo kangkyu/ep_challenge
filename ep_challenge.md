@@ -60,8 +60,8 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
     
     $ cd db
     $ sqlite3 development.sqlite3
-    $ .schema
-    $ .quit
+    sqlite > .schema
+    sqlite > .quit
    
 =====   
     
@@ -108,7 +108,12 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 wget http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
 
     $ vim app/models/fetch.rb
-
+    $ cd db
+    $ sqlite3 development.sqlite3
+    sqlite > .schema
+    sqlite > .quit
+        sqlite > .schema
+    sqlite > select * from fetches;
 **fetch data for the 'entire day of 2014-01-01'**
 
 `Fetch.where(:date_column => date)`  
