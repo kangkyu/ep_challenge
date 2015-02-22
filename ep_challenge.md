@@ -143,46 +143,14 @@ wget http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
     sqlite > .schema
     sqlite > select * from fetches;
 
-**fetch data for the 'entire day of 2014-01-01'**
 
-`Fetch.where(:date_column => date)`  
 
-`Fetch.where("strftime('%Y', date_column) = ?", 2014) Fetch.where("strftime('%m', date_column) + 0 = ?", 01)`   `Fetch.where("strftime('%d', date_column) + 0 = ?", 01)`  
 
-`def self.by_year(year) `  
-  `where('extract(year from date_column) = ?', year) `  
-`end`  
-
-`def self.by_year(year)`   
- ` dt = DateTime.new(year) `  
- ` boy = dt.beginning_of_year `  
-  `eoy = dt.end_of_year `  
-  `where("published_at >= ? and published_at <= ?", boy, eoy) `  
-`end`
-
-**insert them into a database via your rails model**
-
-Assuming that your "date attribute" is a date (rather than a full timestamp) then a simple wherewill give you your "find by date":
-
-+ [ActiveSupport/TimeWithZone/strftime](http://apidock.com/rails/ActiveSupport/TimeWithZone/strftime)
 + [active_record_querying.html](http://guides.rubyonrails.org/v2.3.11/active_record_querying.html)
 + [activerecord-find-by-year-day-or-month-on-a-date-field](http://stackoverflow.com/questions/9624601/activerecord-find-by-year-day-or-month-on-a-date-field)
 + [Learn how to use your database to make your Ruby on Rails applications rock solid.](http://www.pluralsight.com/courses/database-your-friend)
-
-==============
-
 + [ActionView/Helpers/FormHelper.html#method-i-url_field](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field)
-
-`url_field(object_name, method, options = {})Link`
-`Returns a #text_field of type “url”.`
-`url_field("user", "homepage")`
-`# => <input id="user_homepage" name="user[homepage]" type="url" />`
-
-`<%= url_field(:user, :homepage) %>`
-+ [form_helpers.html](http://guides.rubyonrails.org/form_helpers.html)
-
 + [building-your-first-rails-application-models/](http://www.sitepoint.com/building-your-first-rails-application-models/)
-
 + [issues-creating-a-url-form-field-using-action-view-and-form-for](http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for)
 
 ------
