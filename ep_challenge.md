@@ -77,6 +77,12 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
           redirect_to new_fetch_path
         end
       end
+
+      private
+
+      def fetch_params
+        params.require(:fetch).permit(:get_info)
+      end 
     end
 
 =====
