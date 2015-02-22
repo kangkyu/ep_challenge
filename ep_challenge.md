@@ -168,7 +168,11 @@ wget http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
 
 #### 1. Create another model called Report with controllers and views.
 
-###### 2. Here you will create a form that will take a time range (put this in a partial so it can be reused). Query your database for the 'type' of 'PushEvent' within that time range.
+    $ rails generate model Report timerange:string
+    $ rails generate controller reports _reports
+
+###### 2. Here you will create a form that will take a time range **(put this in a partial so it can be reused)**.   
+Query your database for the 'type' of 'PushEvent' within that time range.
 
     $ rail g scaffold Report timerange:
     $ rake db:migrate
