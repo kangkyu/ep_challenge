@@ -53,7 +53,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 > **Command**  
 > wget http://data.githubarchive.org/2015-01-01-{0..23}.json.gz
  
-    $ rails generate controller Fetch 
+    $ rails generate controller fetches 
     $ rails generate model Fetch get_url:string
     $ rake db:migrate
     
