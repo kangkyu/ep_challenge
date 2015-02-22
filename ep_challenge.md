@@ -83,24 +83,12 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
   $ vim app/views/new.html.erb
 
     <h1>Fetch data from Github</h1>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <%= form_for(@fetch) do |f| %>
-          <%= f.label :url, "Input URL to get the data you want to see." %>
-          <br/><br/>
-          <%= f.text_field :url, class: "form-control" %>
-          <br/><br/>
-          <%= f.submit "Fetch Data", class: "btn btn-primary" %>
-        <% end %>
-      </div>
-      <div>
-        <h2>Display all retrieved information</h2>
-          <% if !@fetches.blank? %>
-            <% for item in @fetches %>
-            <%= item.url %>
-          <% end %>
-       </div>
-    </div>
+
+    <%= form_for(@fetch) do |f| %>
+      <%= f.text_field :get_url %>
+      <br/><br/>
+      <%= f.submit %>
+    <% end %>
 
 =====  
 
@@ -112,14 +100,16 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
 =====  
 
-  $ vim app/models/
+    $ rails s
 
-    <h1>Fetch data from Github</h1>
-    <%= form_for(@fetch) do |f| %>
-      <%= f.text_field :get_url %>
-      <br/><br/>
-      <%= f.submit %>
-    <% end %>
+Enter in the url: wget http://data.githubarchive.org/2014-01-01-15.json.gz
+
+    $ cd db
+    $ sqlite3 development.sqlite3
+    sqlite > .schema
+    sqlite > .quit
+
+
 
 ===== 
 
