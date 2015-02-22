@@ -81,7 +81,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
 =====
 
-  $ vim app/views/fetch/new.html.erb
+  $ vim app/views/fetches/new.html.erb
 
     <h1>Fetch data from Github</h1>
 
