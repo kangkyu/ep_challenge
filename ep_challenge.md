@@ -66,19 +66,27 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
     
   $ vim app/controller/fetches_controller.rb
     
-    class FethchesController < ApplicationController
+    class FetchController < ApplicationController
       def new
         @fetch = Fetch.new
       end
       
       def create
-        @fetch = Fetch.new(params[:url])
+        @fetch = Fetch.new(param[:fetch])
         if @fetch.save
           redirect_to new_fetch_path
       end
     end
 
-=====   
+===== 
+
+  $vim app/models/
+
+
+
+
+
+=====  
 
   $ vim app/views/new.html.erb
 
