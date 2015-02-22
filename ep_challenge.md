@@ -72,7 +72,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
       end
       
       def create
-        @fetch = Fetch.new(params[:fetch])
+        @fetch = Fetch.new(fetch_params)
         if @fetch.save
           redirect_to new_fetch_path
         end
@@ -109,6 +109,33 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
     end
 
 =====  
+
+ $ vim app/view/fetches/show.html.erb
+
+    Get info: <%= @fetch.get_info %> <%# get_info method on the @fetch object %>
+
+====
+
+  $vim app/models/fetch.rb
+ 
+    class Fetch < ActiveRecord::Base
+      validates :get_info, presence: true
+    end
+
+=====
+
+add to new.html.erb
+
+<hr />
+
+  <% if @fetch.errors.present? %>
+    <h2>Errors</h2>
+    <% @fetch.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %>
+  <% end %>
+
+=====
 
     $ rails s
 
