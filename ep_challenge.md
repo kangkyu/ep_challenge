@@ -51,7 +51,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 > Activity for 1/1/2015 @ 3PM UTC
 
 > **Command**  
-> wget http://data.githubarchive.org/2015-01-01-15.json.gz
+> wget http://data.githubarchive.org/2015-01-01-{0..23}.json.gz
  
     $ rails generate controller Fetch 
     $ rails generate model Fetch url:string
@@ -102,16 +102,33 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
     $ rails s
 
-Enter in the url: wget http://data.githubarchive.org/2014-01-01-15.json.gz
+Enter in the url: wget http://data.githubarchive.org/2015-01-01-{0..23}.json.gz
+
+To check that the info has been save go to:
 
     $ cd db
     $ sqlite3 development.sqlite3
     sqlite > .schema
     sqlite > .quit
 
-
-
 ===== 
+
+  $ vim app/views/fetch/new.html.erb
+
+  Display the fetched url
+
+    <h2>Display all retrieved information</h2>
+      <% if !@fetches.blank? %>
+        <% for item in @fetches %>
+        <%= item.url %>
+      <% end %>
+    </div>
+
+=====
+
+  $ vim app/controllers/fetch_controller.rb
+
+    add @fetches = Fetch.find(:all)
 
 #### 3. With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
