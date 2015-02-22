@@ -97,6 +97,9 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
     Rails.application.routes.draw do
       root 'fetch#new'
+
+      resources :fetches    
+
     end
 
 =====  
@@ -143,7 +146,7 @@ To check that the info has been save go to:
 
   $ vim app/controllers/fetch_controller.rb
  
-    @fetches = Fetch.find:w
+    @fetches = Fetch.find
 
 
 #### 3. With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
