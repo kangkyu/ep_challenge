@@ -64,7 +64,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
    
 =====   
     
-  $ vim app/controller/fetches_controller.rb
+  $ vim app/controllers/fetch_controller.rb
     
     class FetchController < ApplicationController
       def new
@@ -72,7 +72,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
       end
       
       def create
-        @fetch = Fetch.new(param[:fetch])
+        @fetch = Fetch.new(params[:fetch])
         if @fetch.save
           redirect_to new_fetch_path
       end
