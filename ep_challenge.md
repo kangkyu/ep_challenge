@@ -78,15 +78,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
       end
     end
 
-===== 
-
-  $vim app/models/
-
-
-
-
-
-=====  
+=====
 
   $ vim app/views/new.html.erb
 
@@ -109,6 +101,27 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
           <% end %>
        </div>
     </div>
+
+=====  
+
+  $ vim config/routes.rb
+
+    Rails.application.routes.draw do
+      root 'fetch#new'
+    end
+
+=====  
+
+  $ vim app/models/
+
+    <h1>Fetch data from Github</h1>
+    <%= form_for(@fetch) do |f| %>
+      <%= f.text_field :get_url %>
+      <br/><br/>
+      <%= f.submit %>
+    <% end %>
+
+===== 
 
 #### 3. With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
