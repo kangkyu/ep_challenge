@@ -54,7 +54,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 > wget http://data.githubarchive.org/2015-01-01-{0..23}.json.gz
  
     $ rails generate controller Fetch 
-    $ rails generate model Fetch url:string
+    $ rails generate model Fetch get_url:string
     $ rake db:migrate
     
     $ cd db
@@ -120,15 +120,16 @@ To check that the info has been save go to:
     <h2>Display all retrieved information</h2>
       <% if !@fetches.blank? %>
         <% for item in @fetches %>
-        <%= item.url %>
+        <%= item.get_url %>
       <% end %>
     </div>
 
 =====
 
   $ vim app/controllers/fetch_controller.rb
+ 
+    @fetches = Fetch.find:w
 
-    add @fetches = Fetch.find(:all)
 
 #### 3. With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
