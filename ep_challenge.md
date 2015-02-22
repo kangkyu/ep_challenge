@@ -62,10 +62,10 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
     $ sqlite3 development.sqlite3
     $ .schema
     $ .quit
-    
+   
 =====   
-       
-    $ vim app/controller/fetches_controller.rb
+    
+  $ vim app/controller/fetches_controller.rb
     
     class FethchesController < ApplicationController
       def new
@@ -78,8 +78,30 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
           redirect_to new_fetch_path
       end
     end
-    
-    $ vim app/views/new.html.erb
+
+=====   
+
+  $ vim app/views/new.html.erb
+
+    <h1>Fetch data from Github</h1>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@fetch) do |f| %>
+          <%= f.label :url, "Input URL to get the data you want to see." %>
+          <br/><br/>
+          <%= f.text_field :url, class: "form-control" %>
+          <br/><br/>
+          <%= f.submit "Fetch Data", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      <div>
+        <h2>Display all retrieved information</h2>
+          <% if !@fetches.blank? %>
+            <% for item in @fetches %>
+            <%= item.url %>
+          <% end %>
+       </div>
+    </div>
 
 #### 3. With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
