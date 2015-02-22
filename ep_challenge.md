@@ -63,7 +63,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
     $ .schema
     $ .quit
     
- =====   
+=====   
        
     $ vim app/controller/fetches_controller.rb
     
