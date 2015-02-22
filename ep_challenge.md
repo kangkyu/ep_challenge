@@ -54,7 +54,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 > wget http://data.githubarchive.org/2015-01-01-{0..23}.json.gz
  
     $ rails generate controller fetches 
-    $ rails generate model Fetch get_url:string
+    $ rails generate model Fetch get_info:string
     $ rake db:migrate
     
     $ cd db
@@ -86,7 +86,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
     <h1>Fetch data from Github</h1>
 
     <%= form_for(@fetch) do |f| %>
-      <%= f.text_field :get_url %>
+      <%= f.text_field :get_info %>
       <br/><br/>
       <%= f.submit %>
     <% end %>
@@ -138,7 +138,7 @@ To check that the info has been save go to:
     <h2>Display all retrieved information</h2>
       <% if !@fetches.blank? %>
         <% for item in @fetches %>
-        <%= item.get_url %>
+        <%= item.get_info %>
       <% end %>
     </div>
 
