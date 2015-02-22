@@ -80,7 +80,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
 =====
 
-  $ vim app/views/new.html.erb
+  $ vim app/views/fetch/new.html.erb
 
     <h1>Fetch data from Github</h1>
 
