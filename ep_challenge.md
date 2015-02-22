@@ -112,18 +112,6 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
     $ rails s
 
-**I am getting this error**
-
-NoMethodError in Fetch#new
-Showing /vagrant/epoch/ep_challenge/app/views/fetch/new.html.erb where line #3 raised:
-
-undefined method `fetches_path' for #<#<Class:0x000000045f5c40>:0x000000045ea1b0>
-
-[https://github.com/rails/rails/issues/1769](https://github.com/rails/rails/issues/1769)
-
-**form_for explanation:**
-[http://stackoverflow.com/questions/22941664/form-for-ruby-on-rails](http://stackoverflow.com/questions/22941664/form-for-ruby-on-rails)
-
 ------------------------
 
 Enter in the url: wget http://data.githubarchive.org/2015-01-01-{0..23}.json.gz
