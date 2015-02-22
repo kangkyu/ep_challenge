@@ -41,7 +41,7 @@
  
 -----
 
-***https://www.youtube.com/watch?v=VPor5ErX_90
+**[https://www.youtube.com/watch?v=VPor5ErX_90](https://www.youtube.com/watch?v=VPor5ErX_90)**
 
 ### 2. Perform this task in "Rails" using MVC
 
@@ -63,9 +63,8 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
     $ .schema
     $ .quit
     
-    
-    
-    
+ =====   
+       
     $ vim app/controller/fetches_controller.rb
     
     class FethchesController < ApplicationController
@@ -81,8 +80,6 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
     end
     
     $ vim app/views/new.html.erb
-
-=====
 
 #### 3. With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
