@@ -112,8 +112,9 @@ wget http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
     $ sqlite3 development.sqlite3
     sqlite > .schema
     sqlite > .quit
-        sqlite > .schema
+    sqlite > .schema
     sqlite > select * from fetches;
+
 **fetch data for the 'entire day of 2014-01-01'**
 
 `Fetch.where(:date_column => date)`  
