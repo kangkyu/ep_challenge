@@ -239,17 +239,19 @@ Hyperlink the name to the repository url.
 
 + [Ajax and Rails](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=drop+down+report+via+ajax+rails)
 
-
 ------
+
 #### Add styling using Twitter Bootstrap
 
-Added bootstrap to the Gemfile
+###### Added bootstrap to the Gemfile
 
     gem 'bootstrap-sass',       '3.2.0.0'
 
   $ bundle install
 
-Added SCSS in the app/assets/stylesheets/custom.css.scss
+=====
+
+###### Added SCSS in the app/assets/stylesheets/custom.css.scss
 
     @import "bootstrap-sprockets";  
     @import "bootstrap";  
@@ -374,34 +376,38 @@ Added SCSS in the app/assets/stylesheets/custom.css.scss
 
 =====   
 
-Added a header and a footer in app/views/layouts/application.html.erb
+###### Added a header and a footer in app/views/layouts/application.html.erb
 
-<!DOCTYPE html>  
-<html>  
-  <head>  
-    <title><%= full_title(yield(:title)) %></title>  
-    <%= stylesheet_link_tag 'application', media: 'all',  
+    <!DOCTYPE html>  
+    <html>  
+      <head>  
+        <title><%= full_title(yield(:title)) %></title>  
+        <%= stylesheet_link_tag 'application', media: 'all',  
                                            'data-turbolinks-track' => true %>  
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>  
-    <%= csrf_meta_tags %>  
-    <%= render 'layouts/shim' %>  
-  </head>  
-  <body>  
-    <%= render 'layouts/header' %>  
-    <div class="container">  
-      <%= yield %>  
-    </div>  
-  </body>  
-</html>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>  
+        <%= csrf_meta_tags %>  
+        <%= render 'layouts/shim' %>  
+      </head>  
+      <body>  
+        <%= render 'layouts/header' %>  
+        <div class="container">  
+          <%= yield %>  
+        </div>  
+      </body>  
+    </html>
 
-Add a partial for Internet Explorer Compatibilty app/views/layouts/_shim.html.erb
+=====
+
+###### Add a partial for Internet Explorer Compatibilty app/views/layouts/_shim.html.erb
 
     <!--[if lt IE 9]>  
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">  
       </script>  
     <![endif]-->
 
-Added a header partial app/views/layouts/_header.html.erb
+=====
+
+###### Added a header partial app/views/layouts/_header.html.erb
 
     <header class="navbar navbar-fixed-top navbar-inverse">  
       <div class="container">  
@@ -416,5 +422,20 @@ Added a header partial app/views/layouts/_header.html.erb
   </div>  
 </header>  
 
+=====
 
+###### Added a footer partial app/views/layouts/_footer.html.erb
+    <footer class="footer">  
+      <p><small>  
+        Jen Diamond - thejendiamond@gmail.com  
+      </small>  
+      <nav>  
+        <ul>  
+          <li><%= link_to "Home",   '#' %></li>  
+          <li><%= link_to "Top 10", '#' %></li>  
+          <li><%= link_to "Top 25", '#' %></li>  
+        </ul>  
+      </nav>  
+    </footer>
 
+-----
