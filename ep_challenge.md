@@ -172,7 +172,34 @@ To check that the info has been save go to:
 
 #### 3. With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
-wget http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
+added to the show.html.erb
+
+Get info: <%= @fetch.get_info %> <%# get_info method on the @fetch object %>
+<br />
+<% Yajl::Parser.parse(@fetch.events_js) do |event| %>
+  <%= event %>
+<% end %>
+
+
+added to the fetch_model.rb
+
+require 'open-uri'
+require 'zlib'
+require 'yajl'
+
+class Fetch < ActiveRecord::Base
+  validates :get_info, presence: true
+
+  def events_js
+    gz = open(get_info)
+    js = Zlib::GzipReader.new(gz).read
+  end
+end
+
+added 
+gen yjal
+
+http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
 
     $ vim app/models/fetch.rb
     $ cd db
