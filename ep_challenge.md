@@ -167,30 +167,30 @@ And this line to app/controllers/fetch_controller.rb
 
 ###### Added the [gem yjal](https://github.com/brianmario/yajl-ruby) to the Gemfile
 
-gem "yajl-ruby"
+    gem "yajl-ruby"
 
 ###### Added to the app/views/fetches/show.html.erb
 
-Get info: <%= @fetch.get_info %> <%# get_info method on the @fetch object %>
-<br />
-<% Yajl::Parser.parse(@fetch.events_js) do |event| %>
-  <%= event %>
-<% end %>
+    Get info: <%= @fetch.get_info %> <%# get_info method on the @fetch object %>  
+    <br />  
+    <% Yajl::Parser.parse(@fetch.events_js) do |event| %>  
+      <%= event %>  
+    <% end %>
 
 
 ###### Added this block of code to the app/models/fetch.rb
 
-    require 'open-uri'
-    require 'zlib'
+    require 'open-uri'  
+    require 'zlib'  
     require 'yajl'
 
-    class Fetch < ActiveRecord::Base
+    class Fetch < ActiveRecord::Base  
       validates :get_info, presence: true
 
-      def events_js
-        gz = open(get_info)
-        js = Zlib::GzipReader.new(gz).read
-      end
+      def events_js  
+        gz = open(get_info)  
+        js = Zlib::GzipReader.new(gz).read  
+      end  
     end
 
 
