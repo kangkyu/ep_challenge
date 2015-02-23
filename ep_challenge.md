@@ -117,7 +117,7 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
 ====
 
-To show if any errors, like a blank field, resulting from bad input in the form.
+Show any errors, like a blank field, resulting from bad input in the form.  
 Added to this block of code to app/models/fetch.rb
  
     class Fetch < ActiveRecord::Base
