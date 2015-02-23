@@ -199,8 +199,9 @@ And this line to app/controllers/fetch_controller.rb
 
 #### 1. Create another model called Report with controllers and views.
 
+    $ rails generate controller reports
     $ rails generate model Report timerange:string
-    $ rails generate controller reports _reports
+
 
 #### 2. Here you will create a form that will take a time range **(put this in a partial so it can be reused)**.   
 Query your database for the 'type' of 'PushEvent' within that time range.
