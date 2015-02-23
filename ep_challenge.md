@@ -117,39 +117,29 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
 ====
 
-  $vim app/models/fetch.rb
+To show if any errors, like a blank field, resulting from bad input in the form.
+Added to this block of code to app/models/fetch.rb
  
     class Fetch < ActiveRecord::Base
       validates :get_info, presence: true
     end
 
-=====
+And this block of code to app/views/fetches/new.html.erb
 
-add to new.html.erb
+    <hr />
 
-<hr />
+      <% if @fetch.errors.present? %>
+        <h2>Errors</h2>
+        <% @fetch.errors.full_messages.each do |message| %>
+          <%= message %>
+        <% end %>
+      <% end %>
 
-  <% if @fetch.errors.present? %>
-    <h2>Errors</h2>
-    <% @fetch.errors.full_messages.each do |message| %>
-      <%= message %>
-    <% end %>
-  <% end %>
-
-=====
-
-    $ rails s
 
 ------------------------
 
 Enter in the url: wget http://data.githubarchive.org/2015-01-01-{0..23}.json.gz
 
-To check that the info has been save go to:
-
-    $ cd db
-    $ sqlite3 development.sqlite3
-    sqlite > .schema
-    sqlite > .quit
 
 ===== 
 
