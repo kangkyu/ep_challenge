@@ -163,7 +163,13 @@ And this line to app/controllers/fetch_controller.rb
 
 #### 3. With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
-added to the show.html.erb
+##### To load, read and write the information fetched from the Github url
+
+###### Added the [gem yjal](https://github.com/brianmario/yajl-ruby) to the Gemfile
+
+gem "yajl-ruby"
+
+###### Added to the app/views/fetches/show.html.erb
 
 Get info: <%= @fetch.get_info %> <%# get_info method on the @fetch object %>
 <br />
@@ -172,23 +178,22 @@ Get info: <%= @fetch.get_info %> <%# get_info method on the @fetch object %>
 <% end %>
 
 
-added to the fetch_model.rb
+###### Added this block of code to the app/models/fetch.rb
 
-require 'open-uri'
-require 'zlib'
-require 'yajl'
+    require 'open-uri'
+    require 'zlib'
+    require 'yajl'
 
-class Fetch < ActiveRecord::Base
-  validates :get_info, presence: true
+    class Fetch < ActiveRecord::Base
+      validates :get_info, presence: true
 
-  def events_js
-    gz = open(get_info)
-    js = Zlib::GzipReader.new(gz).read
-  end
-end
+      def events_js
+        gz = open(get_info)
+        js = Zlib::GzipReader.new(gz).read
+      end
+    end
 
-added 
-gen yjal
+
 
 http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
 
