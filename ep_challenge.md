@@ -160,7 +160,7 @@ Added this line to app/controllers/fetch_controller.rb
 
 ##### To load, read and write the information fetched from the Github url
 
-###### Added the [gem yjal](https://github.com/brianmario/yajl-ruby) to the Gemfile
+###### Added the [gem yajl](https://github.com/brianmario/yajl-ruby) to the Gemfile
 
     gem "yajl-ruby"
 
