@@ -136,16 +136,13 @@ And this block of code to app/views/fetches/new.html.erb
         <% end %>
       <% end %>
 
-
-------------------------
+=====
 
 ##### Enter in the url: 
 
 http://data.githubarchive.org/2014-01-01-1.json.gz
 
-
-
-###### To displays information from the fetched url
+###### To display information from the fetched url
 
 Added to this block of code to app/views/fetch/new.html.erb
 
@@ -156,10 +153,11 @@ Added to this block of code to app/views/fetch/new.html.erb
       <% end %>
     </div>
 
-And this line to app/controllers/fetch_controller.rb
+Added this line to app/controllers/fetch_controller.rb
  
     @fetches = Fetch.find
 
+-----
 
 #### 3. With the URL that was input through the view's form, fetch data for the 'entire day of 2014-01-01' and insert them into a database via your rails model.
 
