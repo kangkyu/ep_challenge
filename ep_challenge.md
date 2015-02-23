@@ -200,13 +200,12 @@ And this line to app/controllers/fetch_controller.rb
 #### 1. Create another model called Report with controllers and views.
 
     $ rails generate controller reports
-    $ rails generate model Report timerange:string
+    $ rails generate model Report time_range:string
 
 
 #### 2. Here you will create a form that will take a time range **(put this in a partial so it can be reused)**.   
 Query your database for the 'type' of 'PushEvent' within that time range.
 
-    $ rail g scaffold Report timerange:
     $ rake db:migrate
     $ vim app/views/shared/_timerange.rb
 
@@ -216,11 +215,11 @@ Query your database for the 'type' of 'PushEvent' within that time range.
 
 #### 3. Output the results in a bar graph showing only the top ten ['repository']['name'] and the count. (hint some ['repository']['name'] have multiple PushEvents)
 
-+ [display-in-a-graph-just-unique-values-for-a-column](http://stackoverflow.com/questions/19856714/display-in-a-graph-just-unique-values-for-a-column)
 + [graphing](https://www.ruby-toolbox.com/categories/graphing)
 [Graphs](https://books.google.com/books?id=87YaAtJn5BQC&pg=PA155&lpg=PA155&dq=rails+Output+the+results+in+a+bar+graph&source=bl&ots=Y182B3tPyl&sig=R0YJJ12tj1h2rsLn0_9bfOtfXG4&hl=en&sa=X&ei=-KLlVLfwOZekoQTZnoC4Bg&ved=0CD0Q6AEwBA#v=onepage&q=rails%20Output%20the%20results%20in%20a%20bar%20graph&f=false)
 + [githubarchive.org/](https://www.githubarchive.org/)
 + [Railscasts Episodes/223 Charts](http://railscasts.com/episodes/223-charts?view=comments)
++ [display-in-a-graph-just-unique-values-for-a-column](http://stackoverflow.com/questions/19856714/display-in-a-graph-just-unique-values-for-a-column)
 
 ------
 
@@ -228,7 +227,7 @@ Query your database for the 'type' of 'PushEvent' within that time range.
 Hyperlink the name to the repository url.  
 (Hint: here's a plugin that helps draw datatables - https://datatables.net)
 
-**tutorials:**
+**Resources:**
 + [Railscasts Episodes Datatables](http://railscasts.com/episodes?utf8=%E2%9C%93&search=datatables)
 + [Sitepoint working-jquery-datatables/](http://www.sitepoint.com/working-jquery-datatables/)
 + [jquery-datatables-column-filter](https://jquery-datatables-column-filter.googlecode.com/svn/trunk/default.html)
@@ -244,128 +243,180 @@ Hyperlink the name to the repository url.
 
 
 ------
-#### Add styling using Twitter Bootstrap.
+#### Add styling using Twitter Bootstrap
 
-    $ vim Gemfile
+Added bootstrap to the Gemfile
 
-    source 'https://rubygems.org'
-
-    gem 'rails',                          '4.2.0'
     gem 'bootstrap-sass',       '3.2.0.0'
 
-    $ bundle install
-    $ vim app/assets/stylesheets/custom.css.scss
+  $ bundle install
 
-    @import "bootstrap-sprockets";
-    @import "bootstrap";
+Added SCSS in the app/assets/stylesheets/custom.css.scss
 
-/* universal */
+    @import "bootstrap-sprockets";  
+    @import "bootstrap";  
 
-body {
-  padding-top: 60px;
-}
+    /* mixins, variables, etc. */
 
-section {
-  overflow: auto;
-}
+    $gray-medium-light: #eaeaea;
 
-textarea {
-  resize: vertical;
-}
+    @mixin box_sizing {  
+      -moz-box-sizing:    border-box;  
+      -webkit-box-sizing: border-box;  
+      box-sizing:         border-box;  
+    }
 
-.center {
-  text-align: center;
-}
+    /* universal */
 
-.center h1 {
-  margin-bottom: 10px;
-}
+    html {  
+      overflow-y: scroll;
+    }
 
-/* typography */
+    body {  
+      padding-top: 60px;  
+      background-color: #ccc;  
+    }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
+    section {  
+      overflow: auto;  
+    }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
+    textarea {  
+      resize: vertical;   
+    }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: #777;
-}
+    .center {  
+      text-align: center;  
+    }
 
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
+    .center h1 {  
+      margin-bottom: 10px;  
+    }
 
-/* header */
+    #fetch_box {  
+      background-color: #ddd;  
+      width: 50%;  
+      margin: 0 auto;  
+      padding: 20px;  
+      border: 1px solid #939393  
+    }
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-}
+    /* typography */
 
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
-}
+    h1, h2, h3, h4, h5, h6 {  
+      line-height: 1;  
+    }  
 
+    h1 {  
+      font-size: 3em;  
+      letter-spacing: -2px;  
+      margin-bottom: 30px;  
+      text-align: center;  
+    }
 
+    h2 {  
+      font-size: 1.2em;  
+      letter-spacing: -1px;  
+      margin-bottom: 30px;  
+      text-align: center;  
+      font-weight: normal;  
+      color: #777;  
+    }
 
-app/views/layouts/application.html.erb
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= stylesheet_link_tag 'application', media: 'all',
-                                           'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>
-  </head>
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-      <%= yield %>
-    </div>
-  </body>
+    p {  
+      font-size: 1.1em;  
+      line-height: 1.7em;  
+    }
+
+    /* header */ 
+
+    header {
+      float: left;  
+      margin-right: 10px;  
+      font-size: 1em;  
+      color: white;  
+      font-style: bold;  
+      text-transform: uppercase;    
+      letter-spacing: -1px;  
+      padding-top: 3px;  
+      font-weight: bold;  
+      h1 {  
+      float: left;  
+      }  
+      &:hover {  
+        color: white;  
+        text-decoration: none;  
+      }  
+    }
+
+    /* footer */
+
+    footer {  
+      margin-top: 45px;  
+      padding: 5px;  
+      border-top: 1px solid $gray-medium-light;  
+      color: $gray-light;  
+      a {  
+        color: $gray;  
+        &:hover {  
+          color: $gray-darker;  
+        }  
+      }
+      small {  
+        float: left;  
+      }  
+      ul {
+        float: right;  
+        list-style: none;  
+        li {  
+          float: left;  
+          margin-left: 15px;  
+      }  
+    }
+
+=====   
+
+Added a header and a footer in app/views/layouts/application.html.erb
+
+<!DOCTYPE html>  
+<html>  
+  <head>  
+    <title><%= full_title(yield(:title)) %></title>  
+    <%= stylesheet_link_tag 'application', media: 'all',  
+                                           'data-turbolinks-track' => true %>  
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>  
+    <%= csrf_meta_tags %>  
+    <%= render 'layouts/shim' %>  
+  </head>  
+  <body>  
+    <%= render 'layouts/header' %>  
+    <div class="container">  
+      <%= yield %>  
+    </div>  
+  </body>  
 </html>
 
-app/views/layouts/_shim.html.erb
-<!--[if lt IE 9]>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-  </script>
-<![endif]-->
+Add a partial for Internet Explorer Compatibilty app/views/layouts/_shim.html.erb
 
-app/views/layouts/_header.html.erb
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "sample app", '#', id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   '#' %></li>
-        <li><%= link_to "Help",   '#' %></li>
-        <li><%= link_to "Log in", '#' %></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <!--[if lt IE 9]>  
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">  
+      </script>  
+    <![endif]-->
+
+Added a header partial app/views/layouts/_header.html.erb
+
+    <header class="navbar navbar-fixed-top navbar-inverse">  
+      <div class="container">  
+        <%= link_to "sample app", '#', id: "logo" %>  
+        <nav>  
+          <ul class="nav navbar-nav navbar-right">  
+            <li><%= link_to "Home",   '#' %></li>  
+            <li><%= link_to "Help",   '#' %></li>  
+            <li><%= link_to "Log in", '#' %></li>  
+          </ul>  
+        </nav>  
+  </div>  
+</header>  
 
 
 
