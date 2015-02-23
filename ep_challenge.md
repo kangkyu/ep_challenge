@@ -193,25 +193,6 @@ And this line to app/controllers/fetch_controller.rb
       end  
     end
 
-
-
-http://data.githubarchive.org/2014-01-01-{0..23}.json.gz
-
-    $ vim app/models/fetch.rb
-    $ cd db
-    $ sqlite3 development.sqlite3
-    sqlite > .schema
-    sqlite > .quit
-    sqlite > .schema
-    sqlite > select * from fetches;
-    1||2015-02-22 20:22:16.184060|2015-02-22 20:22:16.184060
-
-+ [active_record_querying.html](http://guides.rubyonrails.org/v2.3.11/active_record_querying.html)
-+ [Learn how to use your database to make your Ruby on Rails applications rock solid.](http://www.pluralsight.com/courses/database-your-friend)
-+ [ActionView/Helpers/FormHelper.html#method-i-url_field](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-url_field)
-+ [building-your-first-rails-application-models/](http://www.sitepoint.com/building-your-first-rails-application-models/)
-+ [issues-creating-a-url-form-field-using-action-view-and-form-for](http://stackoverflow.com/questions/21630750/issues-creating-a-url-form-field-using-action-view-and-form-for)
-
 ------
 
 ### Displaying a report:
