@@ -145,11 +145,9 @@ http://data.githubarchive.org/2014-01-01-1.json.gz
 
 
 
-###### Displays the fetched url
+###### To displays information from the fetched url
 
-  $ vim app/views/fetch/new.html.erb
-
-  
+Added to this block of code to app/views/fetch/new.html.erb
 
     <h2>Display all retrieved information</h2>
       <% if !@fetches.blank? %>
@@ -158,9 +156,7 @@ http://data.githubarchive.org/2014-01-01-1.json.gz
       <% end %>
     </div>
 
-=====
-
-  $ vim app/controllers/fetch_controller.rb
+And this line to app/controllers/fetch_controller.rb
  
     @fetches = Fetch.find
 
