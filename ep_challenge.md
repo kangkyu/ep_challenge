@@ -117,7 +117,8 @@ See example form [http://www.githubarchive.org](http://www.githubarchive.org)
 
 ====
 
-Show any errors, like a blank field, resulting from bad input in the form.  
+###### Show any errors, like a blank field, resulting from bad input in the form. 
+ 
 Added to this block of code to app/models/fetch.rb
  
     class Fetch < ActiveRecord::Base
@@ -138,14 +139,17 @@ And this block of code to app/views/fetches/new.html.erb
 
 ------------------------
 
-Enter in the url: wget http://data.githubarchive.org/2015-01-01-{0..23}.json.gz
+##### Enter in the url: 
+
+http://data.githubarchive.org/2014-01-01-1.json.gz
 
 
-===== 
+
+###### Displays the fetched url
 
   $ vim app/views/fetch/new.html.erb
 
-  Display the fetched url
+  
 
     <h2>Display all retrieved information</h2>
       <% if !@fetches.blank? %>
