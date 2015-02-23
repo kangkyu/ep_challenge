@@ -1,6 +1,3 @@
-[My foibles](https://gist.github.com/jendiamond/fc1d3f7806a3814afd83)  
-[OG Challenge](https://github.com/ceospfx/epoch/blob/master/README.md)
-
 ## 1. Generate a new rails app
 
     $ rails new ep_challenge
