@@ -166,7 +166,7 @@ Added this line to app/controllers/fetch_controller.rb
 
 ###### Added to the app/views/fetches/show.html.erb
 
-    Get info: <%= @fetch.get_info %> <%# get_info method on the @fetch object %>  
+    Get info: <%= @fetch.get_info %> <%= get_info method on the @fetch object %>  
     <br />  
     <% Yajl::Parser.parse(@fetch.events_js) do |event| %>  
       <%= event %>  
