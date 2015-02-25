@@ -192,6 +192,8 @@ Added this line to app/controllers/fetch_controller.rb
 
 Save each json element as an ActiveRecord object do this in the fetch create method in the controller or in the fetch model
 
+hash = JSON.parse string
+
 -----
 
 ### Displaying a report:
