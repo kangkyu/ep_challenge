@@ -1,0 +1,25 @@
+<h1>Fetch data from Github</h1>
+
+<%= form_for(@fetch) do |f| %>
+  <%= f.text_field :get_info %>
+  <br/><br/>
+  <%= f.submit 'get info' %>
+<% end %>
+
+
+<hr />
+
+  <% if @fetch.errors.present? %>
+    <h2>Errors</h2>
+    <% @fetch.errors.full_messages.each do |message| %>
+      <%= message %>
+    <% end %>
+  <% end %>
+
+    <h2>Display all retrieved information</h2>
+      <% if !@fetches.blank? %>
+        <% for item in @fetches %>
+        <%= item.get_info %><br>
+        <% end %>
+      <% end %>
+

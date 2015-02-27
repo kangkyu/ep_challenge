@@ -1,0 +1,7 @@
+Get info: <%= @fetch.get_info %><br><br> <%# get_info method on the @fetch object %>
+
+  <% @fetch.events.each do |event| %>
+    <%= event.hsh["created_at"] %><br>
+    <%= event.hsh["repository"] %>
+    <br><br>
+  <% end %>
