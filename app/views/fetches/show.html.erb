@@ -1,4 +1,6 @@
-Get info: <%= @fetch.get_info %><br><br>
+Get info: <%= @fetch.get_info %>
+<%= pluralize(@fetch.events.count, 'event') %> 
+<br><br>
 
 <% @fetch.events.each do |event| %>
   <%= event.time_created %><br>

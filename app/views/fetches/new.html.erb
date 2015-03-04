@@ -3,6 +3,12 @@
 <%= form_for(@fetch) do |f| %>
   <%= f.text_field :get_info %>
   <%= f.submit 'get info' %>
+  <br>
+  <%= f.label :starting_at %>
+  <%= f.datetime_select :starting_at, default: Time.zone.now.beginning_of_year, ampm: true, discard_minute: true %>
+  <br>
+  <%= f.label :ending_at %>
+  <%= f.datetime_select :ending_at, default: Time.zone.now.beginning_of_year, ampm: true, discard_minute: true %>
 <% end %>
 
 <% if @fetch.errors.present? %>
@@ -11,5 +17,3 @@
     <%= message %>
   <% end %>
 <% end %>
-
-

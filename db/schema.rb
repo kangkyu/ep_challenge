@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150227040646) do
+ActiveRecord::Schema.define(version: 20150304110637) do
 
   create_table "events", force: :cascade do |t|
     t.datetime "time_created"
@@ -24,8 +24,10 @@ ActiveRecord::Schema.define(version: 20150227040646) do
 
   create_table "fetches", force: :cascade do |t|
     t.string   "get_info"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.datetime "starting_at"
+    t.datetime "ending_at"
   end
 
 end

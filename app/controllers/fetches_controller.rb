@@ -13,7 +13,7 @@ class FetchesController < ApplicationController
     @fetch = Fetch.new(fetch_params)
 
     if @fetch.save
-      @fetch.save_events_hash
+      @fetch.save_events
       redirect_to fetch_path(@fetch)
     else
       render :new
@@ -24,10 +24,14 @@ class FetchesController < ApplicationController
     @fetch = Fetch.find(params[:id])
   end
 
+  def index
+    @fetches = Fetch.all
+  end
+
   private
 
   def fetch_params
-    params.require(:fetch).permit(:get_info)
+    params.require(:fetch).permit(:get_info, :starting_at, :ending_at)
   end
 
 end

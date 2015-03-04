@@ -1,0 +1,7 @@
+<h1>fetch index</h1>
+
+<% @fetches.each do |fetch| %>
+  <%= link_to fetch.get_info, fetch_path(fetch) %><br>
+<% end %>
+<br><br>
+<%= link_to 'new fetch', new_fetch_path %>
