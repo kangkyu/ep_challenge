@@ -30,9 +30,9 @@ class Fetch < ActiveRecord::Base
       events_json = Zlib::GzipReader.new(gz).read
       Yajl::Parser.parse(events_json) do |event|
         if event["repository"]
-          self.events.create(time_created: event["created_at"], repo_name: event["repository"]["name"], the_type: event["type"])
+          self.events.create(time_created: event["created_at"], repo_name: event["repository"]["name"], the_type: event["type"], repo_url: event["repository"]["url"])
         elsif event["repo"]
-          self.events.create(time_created: event["created_at"], repo_name: event["repo"]["name"], the_type: event["type"])
+          self.events.create(time_created: event["created_at"], repo_name: event["repo"]["name"], the_type: event["type"], repo_url: event["repo"]["url"])
         else
         end
       end

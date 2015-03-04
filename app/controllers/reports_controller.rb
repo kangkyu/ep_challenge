@@ -12,6 +12,8 @@ class ReportsController < ApplicationController
   def show
     @report = Report.last
     @reports_push_events = Event.where(the_type: "PushEvent", time_created: Time.zone.parse(@report.starting_at.to_s)..Time.zone.parse(@report.ending_at.to_s))
+    @event_counts = @reports_push_events.group(:repo_name, :repo_url).count.sort_by {|k,v| -v }
+    @reports_push_events_in_order = @reports_push_events.order(:repo_name)
   end
 
   # GET /reports/new
