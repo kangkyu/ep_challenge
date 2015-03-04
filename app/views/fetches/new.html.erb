@@ -1,19 +1,4 @@
 <h1>Fetch data from Github</h1>
 
-<%= form_for(@fetch) do |f| %>
-  <%= f.text_field :get_info %>
-  <%= f.submit 'get info' %>
-  <br>
-  <%= f.label :starting_at %>
-  <%= f.datetime_select :starting_at, default: Time.zone.now.beginning_of_year, ampm: true, discard_minute: true %>
-  <br>
-  <%= f.label :ending_at %>
-  <%= f.datetime_select :ending_at, default: Time.zone.now.beginning_of_year, ampm: true, discard_minute: true %>
-<% end %>
+<%= render 'shared/form', obj: @fetch %>
 
-<% if @fetch.errors.present? %>
-  <h2>Errors</h2>
-  <% @fetch.errors.full_messages.each do |message| %>
-    <%= message %>
-  <% end %>
-<% end %>

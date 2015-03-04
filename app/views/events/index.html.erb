@@ -1,5 +1,6 @@
-  <% @events.each do |event| %>
-    <%= event.hsh["created_at"] %><br>
-    <%= event.hsh["repository"] %>
-    <br><br>
-  <% end %>
+<% @events.each do |event| %>
+  <%= event.time_created %><br>
+  <%= event.repo_name %>
+  <%= event.type %>
+  <br><br>
+<% end %>
