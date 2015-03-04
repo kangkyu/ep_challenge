@@ -15,7 +15,12 @@ class Fetch < ActiveRecord::Base
   def save_events_hash
     parser = Yajl::Parser.new
     parser.parse(events_json) do |event|
-      self.events.create(hsh: event)
+      if event["repository"]
+        self.events.create(time_created: event["created_at"], repo_name: event["repository"]["name"])
+      elsif event["repo"]
+        self.events.create(time_created: event["created_at"], repo_name: event["repo"]["name"])
+      else
+      end
     end
   end
 
