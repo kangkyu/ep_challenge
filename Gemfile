@@ -2,6 +2,12 @@ source 'https://rubygems.org'
 
 
 gem 'yajl-ruby', require: 'yajl'
+gem "chartkick"
+
+
+
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

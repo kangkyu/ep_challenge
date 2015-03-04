@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :reports
+  resources :reports do
+    get 'chart' => 'reports#chart'
+  end
 
   root 'fetches#new'
 

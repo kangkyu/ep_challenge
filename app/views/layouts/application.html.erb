@@ -2,9 +2,24 @@
 <html>
 <head>
   <title>JenChallenge</title>
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- https://datatables.net/manual -->
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
+  <!-- jQuery -->
+  <script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <!-- DataTables -->
+  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
+  <script type="text/javascript">
+    $(document).ready( function () {
+      $('#table_id').DataTable();
+    } );
+  </script>
+  
 </head>
 <body>
 

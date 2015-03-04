@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Starting at:</strong>
+  <%= @report.starting_at %><br>
+  <strong>Ending at:</strong>
+  <%= @report.ending_at %>
+</p>
+
+<p><%= column_chart @event_counts_name_and_url[0..24] %></p>
+<br>
+
+<% @event_counts_name_and_url[0..24].each_with_index do |event, index| %>
+  <%= index+1 %>. <%= event[0][0] %> | <%= event[0][1] %>  | <%= event[1] %> <br>
+<% end %>
+<br>
+
+<%= link_to 'event_counts_name', report_path(@report) %> |
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>
+<br>
+<br>

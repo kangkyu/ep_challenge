@@ -1,6 +1,19 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: [:show, :edit, :update, :destroy]
 
+  def chart
+    @report = Report.find(params[:report_id])
+    @reports_push_events = Event.where(the_type: "PushEvent", time_created: Time.zone.parse(@report.starting_at.to_s)..Time.zone.parse(@report.ending_at.to_s))
+    if @reports_push_events.present?
+      @event_counts_name_and_url = @reports_push_events.group(:repo_name, :repo_url).count.sort_by {|k,v| -v }
+    else
+      redirect_to reports_url, notice: "there's no push events for the time period"
+    end
+
+  end
+
+
+
   # GET /reports
   # GET /reports.json
   def index
@@ -10,10 +23,14 @@ class ReportsController < ApplicationController
   # GET /reports/1
   # GET /reports/1.json
   def show
-    @report = Report.last
+    @report = Report.find(params[:id])
     @reports_push_events = Event.where(the_type: "PushEvent", time_created: Time.zone.parse(@report.starting_at.to_s)..Time.zone.parse(@report.ending_at.to_s))
-    @event_counts = @reports_push_events.group(:repo_name, :repo_url).count.sort_by {|k,v| -v }
-    @reports_push_events_in_order = @reports_push_events.order(:repo_name)
+    if @reports_push_events.present?
+      @event_counts_name = @reports_push_events.group(:repo_name).count.sort_by {|k,v| -v }
+    else
+      redirect_to reports_url, notice: "there's no push events for the time period"
+    end
+
   end
 
   # GET /reports/new
